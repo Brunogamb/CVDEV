@@ -194,6 +194,11 @@ p {
         width: 30px;
         height: 30px;
     }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateX(-50%) translateY(0); }
+        50% { transform: translateX(-50%) translateY(15px); }
+    }
 }
 
 @media (max-width: 380px) {
