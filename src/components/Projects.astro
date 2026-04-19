@@ -140,13 +140,6 @@ import WebAximple from '../assets/screenshots/WebAximple.webp';
     font-size: 18px;
 }
 
-.project-actions a:hover {
-    color: var(--accent-cyan);
-    border-color: var(--accent-cyan);
-    background-color: var(--accent-cyan-alpha);
-    transform: translateY(-2px);
-    filter: drop-shadow(0 4px 12px var(--accent-cyan-alpha));
-}
 
 .tech-logos {
     display: flex;
@@ -191,6 +184,16 @@ p {
     margin: 0;
     line-height: 1.6;
     color: var(--text-secondary);
+}
+
+@media (hover: hover) {
+    .project-actions a:hover {
+        color: var(--accent-cyan);
+        border-color: var(--accent-cyan);
+        background-color: var(--accent-cyan-alpha);
+        transform: translateY(-2px);
+        filter: drop-shadow(0 4px 12px var(--accent-cyan-alpha));
+    }
 }
 
 @media (max-width: 768px) {

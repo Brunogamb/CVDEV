@@ -149,15 +149,18 @@ p {
     transition: var(--transition);
 }
 
-.hero-arrow:hover svg {
-    transform: scale(1.15);
-    filter: drop-shadow(0 2px 8px rgba(0, 210, 255, 0.6));
-}
-
 @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50% { transform: translateX(-50%) translateY(6px); }
 }
+
+@media (hover: hover) {
+    .hero-arrow:hover svg {
+        transform: scale(1.15);
+        filter: drop-shadow(0 2px 8px rgba(0, 210, 255, 0.6));
+    }
+}
+
 
 @media (max-width: 768px) {
     .hero-section {
