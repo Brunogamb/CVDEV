@@ -1,0 +1,247 @@
+---
+---
+<section id="experience" class="experience-section">
+    <h2><i class="fa-solid fa-briefcase"></i>Experiencia</h2>
+    <div class="experience-container">
+        <div class="timeline"></div>
+        
+        <div class="experiences">
+            <article class="experience-card english-course">
+                <div class="timeline-dot"></div>
+                <div class="experience-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="experience-content">
+                    <h3>B2 First for Schools</h3>
+                    <h4>Cambridge</h4>
+                    <p>Certificación Cambridge B2 First for Schools Digital Editions.</p>
+                </div>
+            </article>
+            <article class="experience-card networking">
+                <div class="timeline-dot"></div>
+                <div class="experience-logo">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="experience-content">
+                    <h3>Trabajo en redes</h3>
+                    <h4>Gamberini</h4>
+                    <p>Soporte y optimización de red interna (rendimiento e infraestructura).</p>
+                </div>
+            </article>
+            <article class="experience-card programming">
+                <div class="timeline-dot"></div>
+                <div class="experience-logo">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="experience-content">
+                    <h3>Programación web</h3>
+                    <h4>Gamberini</h4>
+                    <p>Diseño y desarrollo de sitio corporativo para presencia online clara.</p>
+                </div>
+            </article>
+            <article class="experience-card programming">
+                <div class="timeline-dot"></div>
+                <div class="experience-logo">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="experience-content">
+                    <h3>Programación web</h3>
+                    <h4>Farmacia La Estrella</h4>
+                    <p>Implementación de sitio informativo rápido para comunicar productos y horarios.</p>
+                </div>
+            </article>
+            <article class="experience-card programming">
+                <div class="timeline-dot"></div>
+                <div class="experience-logo">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="experience-content">
+                    <h3>Programación web</h3>
+                    <h4>Aximple</h4>
+                    <p>Proyecto de desarrollo web sobre conocimientos de física.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<style>
+.experience-section {
+    height: 100vh;
+    padding: 10px 0 0 0;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.experiences {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 40px var(--accent-cyan-alpha), 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.experience-logo {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-cyan-hover));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
+}
+
+.experience-logo i {
+    font-size: 22px;
+    color: #0f1c2e;
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.timeline {
+    background: linear-gradient(to bottom, transparent, var(--accent-cyan) 4%, var(--accent-cyan) 85%, transparent);
+    width: 3px;
+    height: 730px;
+    margin: 0 42px;
+    border-radius: 2px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -52px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    border: 3px solid var(--bg-dark);
+    z-index: 2;
+    box-shadow: 0 0 0 3px var(--accent-cyan-alpha);
+    transition: var(--transition);
+}
+
+.experience-card:hover .timeline-dot {
+    transform: translateY(-50%) scale(1.2);
+    box-shadow: 0 0 0 6px var(--accent-cyan-alpha);
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin: 40px auto 32px auto;
+    font-size: 32px;
+    gap: 12px;
+    max-width: 900px;
+    padding: 0 20px;
+    color: var(--text-primary);
+}
+
+h3, h4 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    color: var(--accent-cyan);
+    margin-bottom: 4px;
+}
+
+h4 {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+p {
+    width: 100%;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .experience-section {
+        height: auto; 
+        padding: 40px 0;
+    }
+
+    .experience-container {
+        padding: 0 15px;
+    }
+
+    .timeline {
+        display: none;
+    }
+
+    .experiences {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .experience-card {
+        padding: 16px;
+        margin-left: 0; 
+        gap: 15px;
+        align-items: flex-start; 
+    }
+
+    .timeline-dot {
+        display: none;
+    }
+
+    .experience-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .experience-logo i {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-top: 0;
+        justify-content: center; 
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+</style>

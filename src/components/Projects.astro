@@ -1,0 +1,265 @@
+---
+import { Image } from 'astro:assets';
+import AstroLogo from '../assets/technologies/Astro.webp';
+import CSS from '../assets/technologies/CSS.webp';
+import HTML from '../assets/technologies/HTML.webp';
+import JavaScript from '../assets/technologies/JavaScript.webp';
+import WebGamberini from '../assets/screenshots/WebGamberini.webp';
+import WebFarmaciaLaEstrella from '../assets/screenshots/WebFarmaciaLaEstrella.webp';
+import WebAximple from '../assets/screenshots/WebAximple.webp';
+---
+
+<section id="projects" class="projects-section">
+    <h2><i class="fa-solid fa-code"></i>Proyectos</h2>
+    <div class="projects-container">
+        
+        <div class="projects">
+
+            <article class="programming">
+                <Image src={WebGamberini} alt="Captura del sitio web Gamberini" class="web-screenshot" loading="lazy"/>
+                <div class="info-container">
+                    <h3>Gamberini</h3>
+                    <h4>Sitio informativo</h4>
+                    <p>Sitio informativo para pyme. Estructura clara de servicios y presentación profesional.</p>
+                    <div class="project-actions">
+                        <a href="https://gamberini.com.ar" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i>Visitar sitio</a>
+                        <a href="https://github.com/Brunogamb/GAMBERINI.astro" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>Código</a>
+                        <div class="tech-logos">
+                            <Image src={AstroLogo} alt="Astro" title="Astro" />
+                            <Image src={HTML} alt="HTML" title="HTML" />
+                            <Image src={CSS} alt="CSS" title="CSS" />
+                            <Image src={JavaScript} alt="JavaScript" title="JavaScript" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="programming">
+                <Image src={WebFarmaciaLaEstrella} alt="Captura del sitio web Farmacia La Estrella" class="web-screenshot" loading="lazy"/>
+                <div class="info-container">
+                    <h3>Farmacia La Estrella</h3>
+                    <h4>Sitio informativo</h4>
+                    <p>Presencia online de farmacia. Catálogo básico y comunicación clara de marca.</p>
+                    <div class="project-actions">
+                        <a href="https://farmacialaestrella.com.ar" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i>Visitar sitio</a>
+                        <a href="https://github.com/Brunogamb/farmacialaestrella" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>Código</a>
+                        <div class="tech-logos">
+                            <Image src={AstroLogo} alt="Astro" title="Astro" />
+                            <Image src={HTML} alt="HTML" title="HTML" />
+                            <Image src={CSS} alt="CSS" title="CSS" />
+                            <Image src={JavaScript} alt="JavaScript" title="JavaScript" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="programming">
+                <Image src={WebAximple} alt="Captura del sitio web Aximple" class="web-screenshot" loading="lazy"/>
+                <div class="info-container">
+                    <h3>Aximple</h3>
+                    <h4>Sitio informativo</h4>
+                    <p>Plataforma educativa sobre conceptos de física básica. Enfoque en la comprensión visual y práctica.</p>
+                    <div class="project-actions">
+                        <a href="https://brunogamb.github.io/aximple/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i>Visitar sitio</a>
+                        <a href="https://github.com/Brunogamb/aximple" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>Código</a>
+                        <div class="tech-logos">
+                            <Image src={AstroLogo} alt="Astro" title="Astro" />
+                            <Image src={HTML} alt="HTML" title="HTML" />
+                            <Image src={CSS} alt="CSS" title="CSS" />
+                            <Image src={JavaScript} alt="JavaScript" title="JavaScript" />
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<style>
+.projects-section {
+    height: 100vh;
+    padding: 10px 0 0 0;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.programming {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.web-screenshot {
+    max-width: 380px;
+    width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    object-position: center top;
+    border: 1px solid var(--border-color);
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 26px;
+}
+
+.project-actions a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-primary);
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    transition: var(--transition);
+}
+
+.project-actions a i {
+    font-size: 18px;
+}
+
+.project-actions a:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+    background-color: var(--accent-cyan-alpha);
+    transform: translateY(-2px);
+    filter: drop-shadow(0 4px 12px var(--accent-cyan-alpha));
+}
+
+.tech-logos {
+    display: flex;
+    gap: 8px;
+}
+
+.tech-logos img {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin: 40px auto 32px auto;
+    font-size: 32px;
+    gap: 12px;
+    max-width: 900px;
+    padding: 0 20px;
+    color: var(--text-primary);
+}
+
+h3, h4 {
+    line-height: 1;
+}
+
+h3 {
+    font-size: 20px;
+    width: 200px;
+    color: var(--accent-cyan);
+    margin: 0;
+}
+
+h4 {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+p {
+    width: 100%;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .projects-container {
+        padding: 0 15px;
+    }
+
+    .projects {
+        gap: 50px; 
+    }
+
+    .programming {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .web-screenshot {
+        max-width: 100%;
+        max-height: 220px;
+        border-radius: 12px;
+    }
+
+    .info-container {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 26px;
+        justify-content: center;
+    }
+
+    h3 {
+        width: 100%; 
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    h4 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .project-actions {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .project-actions a {
+        flex: 1; 
+        justify-content: center;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .tech-logos {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+}
+</style>
