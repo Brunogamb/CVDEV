@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://brunogamb.github.io/',
+    site: 'https://brunogamb.github.io/CVDEV/',
     base: "/CVDEV/"
 });
