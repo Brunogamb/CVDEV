@@ -7,10 +7,14 @@
             <h1>Hola, soy <span class="name-highlight">Bruno Gamberini</span></h1>
             <h2><span class="role-highlight">Desarrollador Web</span> en Argentina.</h2>
         </div>
-        <div class="hero-badge">
-            <div class="badge-icon">💻</div>
-            <span>Disponible para proyectos</span>
-        </div>
+        <a href="#projects" class="hero-badge" aria-label="Ir a la sección de proyectos">
+            <div class="badge-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+            </div>
+            <span>Ver proyectos</span>
+        </a>
     </div>
     <a href="#experience" class="hero-arrow" aria-label="Bajar a experiencia">
         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +44,7 @@
 }
 
 .hero-text {
-    margin-bottom: 40px;
+    margin-bottom: 46px;
 }
 
 .name-highlight {
@@ -80,14 +84,15 @@
 .hero-badge {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 16px 24px;
+    gap: 10px;
+    padding: 12px 24px;
     background: var(--accent-cyan-alpha);
     border: 2px solid var(--border-color);
     border-radius: 50px;
     backdrop-filter: blur(10px);
     transition: var(--transition);
     animation: pulse 2s ease-in-out infinite;
+    text-decoration: none;
 }
 
 @keyframes pulse {
@@ -96,16 +101,17 @@
 }
 
 .badge-icon {
-    font-size: 20px;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    display: flex;
+    align-items: center;
+    color: var(--accent-cyan);
 }
 
 .hero-badge span {
-    color: var(--accent-cyan);
+    color: var(--white);
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 h1 {
@@ -159,8 +165,13 @@ p {
         transform: scale(1.15);
         filter: drop-shadow(0 2px 8px rgba(0, 210, 255, 0.6));
     }
-}
 
+    .hero-badge:hover {
+        background: rgba(0, 210, 255, 0.15);
+        border-color: var(--accent-cyan);
+        color: var(--accent-cyan);
+    }
+}
 
 @media (max-width: 768px) {
     .hero-section {
@@ -180,9 +191,7 @@ p {
     }
 
     .hero-badge {
-        gap: 8px;
-        border: 1px solid var(--accent-cyan);
-        padding: 8px 16px;
+        padding: 9px 18px;
     }
 
     .hero-badge span {
