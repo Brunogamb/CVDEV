@@ -1,0 +1,15 @@
+{
+    "rewrites": [
+        { 
+        "source": "/cv/:path*", 
+        "destination": "/:path*" 
+        }
+    ],
+    "redirects": [
+        {
+        "source": "/",
+        "destination": "/cv",
+        "permanent": false
+        }
+    ]
+}
